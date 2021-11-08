@@ -9,9 +9,9 @@ print(m)
 # print the marking
 print(m.get_marking())
 
-# next states
+# next state
 m.next()
-print('--- Next states ---')
+print('--- Next state ---')
 print(m)
 print(m.get_marking())
 

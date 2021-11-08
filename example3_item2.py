@@ -13,7 +13,7 @@ print('Is there anyone waiting?', p.is_waiting())
 # check if any patient is inside
 print('Is there anyone inside?', p.is_inside())
 
-# next states
+# next state
 p.next()
 print('--- Next state ---')
 print(p)
