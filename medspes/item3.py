@@ -5,10 +5,12 @@ from medspes.item2 import Patients, InvalidEvent
 
 def print_model():
     """Print the model"""
-    print('Model:                                          ')
-    print('[wait] → start → [inside/busy] → change → [done]')
-    print('           ↑                        ↓           ')
-    print('        [free]   ←   end    ←    [docu]         ')
+    print('Model:                                   ')
+    print('           ―――→ [inside] ―――――           ')
+    print('           |                 ↓           ')
+    print('[wait] → start → [busy] → change → [done]')
+    print('           ↑                 ↓           ')
+    print('        [free] ←  end  ←  [docu]         ')
 
 
 class MergedModel:
@@ -51,13 +53,12 @@ class MergedModel:
 
     def get_marking(self):
         """
-        Return a tuple of the current marking (free, busy/inside, docu, wait, done)
-        - e.g. (1, 0, 0, 5, 1)
+        Return a tuple of the current marking (free, busy, docu, wait, inside, done)
+        - e.g. (1, 0, 0, 5, 0, 1)
         """
         s = self._specialist.get_marking()
         p = self._patients.get_marking()
-        marking = s + (p[0], p[2])  # remove the duplicated merged state: busy/inside
-        return marking
+        return s + p
 
     def run(self):
         """Run the model in terminal"""
