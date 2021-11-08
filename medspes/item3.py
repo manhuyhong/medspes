@@ -16,8 +16,8 @@ def print_model():
 class MergedModel:
     def __init__(self, num_wait):
         """
-        The initial state of the model:\n
-        Specialist: free\n
+        The initial state of the model:
+        Specialist: free
         Patients: wait=num_wait, inside=0, done=0
 
         :param num_wait: accepts an integer from 0 to 10

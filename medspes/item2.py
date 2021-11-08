@@ -17,7 +17,7 @@ class InvalidEvent(Exception):
 class Patients:
     def __init__(self, num_wait):
         """
-        The initial state of the patients is:\n
+        The initial state of the patients:
         wait=num_wait, inside=0, done=0
 
         :param num_wait: accepts an integer from 0 to 10
