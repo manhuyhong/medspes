@@ -4,12 +4,12 @@ Medspes is a Python library for modeling the business of a clinic using Petri Ne
 
 ## Installation
 
-Dependencies: SNAKES
+Dependencies: [SNAKES](https://github.com/fpom/snakes)
 
-Install manually using the setup.py file.
+Using pip
 
 ```bash
-python setup.py install
+pip install .
 ```
 
 ## Usage
@@ -39,6 +39,7 @@ print('--- Next 2 states ---')
 s.advance(2)
 print(s)
 print(s.get_marking())
+
 ```
 Output
 
@@ -62,6 +63,7 @@ from medspes.item1 import Specialist
 
 s = Specialist()
 s.run()
+
 ```
 
 Output
@@ -85,6 +87,12 @@ free
 busy
 Stopped
 
+```
+
+## Uninstallation
+
+```bash
+pip uninstall medspes
 ```
 
 ## License

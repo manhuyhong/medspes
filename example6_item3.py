@@ -12,5 +12,5 @@ try:
     m = MergedModel(n)
     m.run()
 except ValueError:
-    print('Uh oh! number of patients cannot be negative,')
+    print('Uh oh! The number of patients cannot be negative,')
     print('or larger than 10, as our clinic is not big enough.')
